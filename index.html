@@ -40,7 +40,7 @@
   .hand{font-family:'Yomogi', cursive; color:var(--coral);}
   a{color:inherit;}
   img{max-width:100%;display:block;}
-  .wrap{max-width:960px; margin:0 auto; padding:0 24px;}
+  .wrap{max-width:960px; margin:0 auto; padding:0 24px; min-width:0;}
 
   /* ---------- decorative leaf / heart svgs ---------- */
   .leaf-corner{position:absolute; width:120px; opacity:.85; pointer-events:none;}
@@ -109,12 +109,13 @@
   .section-sub{text-align:center; color:#6b6656; margin:0 auto 44px; font-size:.95rem; line-height:1.9; max-width:420px;}
 
   /* ---------- empathy cards ---------- */
-  .empathy-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:16px;}
+  .empathy-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:16px; min-width:0;}
   @media(max-width:600px){.empathy-grid{grid-template-columns:1fr;}}
   .empathy-card{
     background:var(--paper); border-radius:var(--radius); padding:22px 20px;
     box-shadow:0 6px 18px rgba(31,74,52,.06);
     font-size:.96rem; line-height:1.75; display:flex; gap:12px; align-items:flex-start;
+    min-width:0; overflow-wrap:break-word; word-break:normal;
   }
   .empathy-card .heart{color:var(--coral); font-size:1.2rem; flex:none;}
 
@@ -155,6 +156,14 @@
   }
   .timeline .tag{font-family:'Zen Maru Gothic'; font-weight:700; color:var(--gold);}
   .quote{font-family:'Yomogi',cursive; font-size:1.25rem; text-align:center; margin-top:34px; color:#fff;}
+  .role-badge{
+    display:inline-block; background:var(--gold); color:#fff; font-family:'Zen Maru Gothic'; font-weight:700;
+    font-size:.9rem; padding:6px 20px; border-radius:999px; margin-bottom:10px;
+  }
+  .role-desc{
+    font-family:'Yomogi',cursive; color:var(--cream); font-size:1.05rem; text-align:center;
+    max-width:420px; margin:0 auto 18px; line-height:1.8;
+  }
 
   /* ---------- services ---------- */
   .service-grid{display:grid; grid-template-columns:1fr 1fr; gap:24px;}
@@ -239,7 +248,7 @@
 
 <header>
   <div class="nav">
-    <div class="brand">Cuddle<span class="dot">/</span>up <span style="font-size:.8em; color:var(--coral); margin-left:2px;">心育</span></div>
+    <div class="brand">Cuddle<span class="dot">/</span>up <span style="font-size:.8em; color:var(--forest); margin-left:2px;">心育協会</span></div>
     <div style="display:flex; align-items:center; gap:10px;">
       <a href="https://www.instagram.com/cuddle_up.a25" target="_blank" rel="noopener" aria-label="Instagram" style="display:flex; align-items:center; color:var(--forest);">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>
@@ -290,6 +299,8 @@
         <span class="sticker">♡ 5人きょうだい</span>
       </div>
       <h2 class="section-title" style="color:#fff;">代表 藤川 安優</h2>
+      <span class="role-badge">KOKOIKUパートナー</span>
+      <p class="role-desc">自分・子育て・家族の悩みを一緒に整理し、<br>「これからどうしたい?」を見つける伴走者</p>
       <p class="section-sub" style="color:rgba(255,255,255,.75);">5人の子育てをしながら、悩んで、迷って、<br>それでも前を向いてきました。</p>
       <div class="timeline">
         <div class="item"><span class="tag">21歳</span>結婚。新しい生活がはじまる。</div>
@@ -336,6 +347,7 @@
           <li>初回オリジナルノート1冊プレゼント</li>
           <li>1回だけでも大丈夫</li>
         </ul>
+        <div class="campaign-note" style="background:var(--forest); margin-top:2px;">「笑顔になるノート」単品販売 12月末まで <strong>3,000円</strong>(1月以降3,900円)</div>
         <span class="badge-note">今の私は、どう感じてる?</span>
       </div>
     </div>
@@ -389,10 +401,10 @@
 </section>
 
 <footer>
-  <p class="brand" style="justify-content:center; color:#fff;">Cuddle<span class="dot">/</span>up 心育</p>
+  <p class="brand" style="justify-content:center; color:#fff;">Cuddle<span class="dot">/</span>up 心育協会</p>
   <p>つながる。ありがとう。育ちあう。</p>
   <p><a href="https://www.instagram.com/cuddle_up.a25" target="_blank" rel="noopener">@cuddle_up.a25</a> ／ <a href="https://lin.ee/YvLUH8B" target="_blank" rel="noopener">公式LINE</a></p>
-  <p style="opacity:.6; margin-top:18px;">© Cuddle/up 心育</p>
+  <p style="opacity:.6; margin-top:18px;">© Cuddle/up 心育協会</p>
 </footer>
 
 </body>
